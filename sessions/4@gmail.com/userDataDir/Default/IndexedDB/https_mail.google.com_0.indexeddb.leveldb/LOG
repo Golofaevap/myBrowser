@@ -1,0 +1,6 @@
+2021/08/26-20:50:28.196 12218 Creating DB D:\Николай\tech\code\puppeteer\myBrowser\sessions\4@gmail.com\userDataDir\Default\IndexedDB\https_mail.google.com_0.indexeddb.leveldb since it was missing.
+2021/08/26-20:50:28.203 12218 Reusing MANIFEST D:\Николай\tech\code\puppeteer\myBrowser\sessions\4@gmail.com\userDataDir\Default\IndexedDB\https_mail.google.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/08/26-20:51:00.202 51c Level-0 table #5: started
+2021/08/26-20:51:00.217 51c Level-0 table #5: 1778 bytes OK
+2021/08/26-20:51:00.220 51c Delete type=0 #3
+2021/08/26-20:51:00.220 51c Manual compaction at level-0 from (begin) .. (end); will stop at (end)

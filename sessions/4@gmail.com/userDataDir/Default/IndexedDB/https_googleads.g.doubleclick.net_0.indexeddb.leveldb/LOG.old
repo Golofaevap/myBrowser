@@ -1,0 +1,8 @@
+2021/08/26-20:03:16.273 118c8 Reusing MANIFEST D:\Николай\tech\code\puppeteer\myBrowser\sessions\4@gmail.com\userDataDir\Default\IndexedDB\https_googleads.g.doubleclick.net_0.indexeddb.leveldb/MANIFEST-000001
+2021/08/26-20:03:16.274 118c8 Recovering log #4
+2021/08/26-20:03:16.274 118c8 Reusing old log D:\Николай\tech\code\puppeteer\myBrowser\sessions\4@gmail.com\userDataDir\Default\IndexedDB\https_googleads.g.doubleclick.net_0.indexeddb.leveldb/000004.log 
+2021/08/26-20:03:23.440 d0d8 Level-0 table #8: started
+2021/08/26-20:03:23.440 d0d8 Level-0 table #8: 0 bytes OK
+2021/08/26-20:03:23.442 d0d8 Delete type=0 #4
+2021/08/26-20:03:23.443 d0d8 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/08/26-20:03:23.443 d0d8 Manual compaction at level-1 from (begin) .. (end); will stop at (end)

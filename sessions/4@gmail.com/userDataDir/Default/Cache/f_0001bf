@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="ahrefs-site-verification" content="caef820aa855409583341953cf3dac7a214a1c4d28cbbb94394df55aec0ad22b">
+  <meta name="description" content="Check your IP address and its geolocation. Online anonymity checker">
+  <link rel="stylesheet" href="/css/leaflet.css"/>
+  <link rel="stylesheet" href="/css/app.css">
+  <link rel="icon" href="/img/trustworthy-status.svg" />
+  <title>Check browser fingerprints</title>
+
+</head>
+
+<body class="not-scrolling">
+
+  <div class="container-fluid">
+    <div class="container">
+
+      <div class="loader">
+        <svg id="fingerprint" fingerprint width="120px" height="120px" viewBox="0 0 34 34" version="1.1"
+          xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <g id="document" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <g id="_fingerprint" transform="translate(1.000000, 1.000000)" stroke="#01AE7D">
+              <circle id="outer-circle" cx="16" cy="16" r="16"></circle>
+              <g transform="translate(7.000000, 6.000000)" stroke-linecap="round">
+                <path id="a"
+                  d="M3.14414922,1.97419264 C3.14414922,1.97419264 5.30885997,0.506351808 9.06036082,0.506351808 C12.8118617,0.506351808 14.781903,1.97419264 14.781903,1.97419264"
+                  id="Path-6"></path>
+                <path id="b"
+                  d="M0.466210729,7.27628774 C0.466210729,7.27628774 3.19024811,2.75878123 9.09512428,2.96502806 C15.0000005,3.17127489 17.4745821,7.17202872 17.4745821,7.17202872"
+                  id="Path-7"></path>
+                <path id="c"
+                  d="M2,16.4687762 C2,16.4687762 1.12580828,14.9305411 1.27082278,11.9727304 C1.45871447,8.14036841 5.19587478,5.30175361 9.05270871,5.30175361 C12.9095426,5.30175361 15.0000001,7.82879552 15.8975926,9.33195218 C16.5919575,10.4947729 17.7597991,14.4361492 14.6226101,15.0206592 C12.41268,15.4324056 11.5911303,13.4911155 11.5911303,12.9859143 C11.5911303,11.9727302 11.1054172,10.2336826 9.05270848,10.2336826 C6.99999978,10.2336826 6.11384543,11.8665663 6.4593664,13.7955614 C6.6532895,14.8782069 7.59887942,18.3701197 12.0173963,19.5605638"
+                  id="Path-8"></path>
+                <path id="d"
+                  d="M7.0204614,19.6657197 C7.0204614,19.6657197 3.88328263,16.5690127 3.88328268,12.9603117 C3.88328274,9.35161068 6.59923746,7.80642537 9.0076008,7.80642554 C11.4159641,7.8064257 14.1798468,9.55747124 14.1798468,12.759562"
+                  id="Path-9"></path>
+                <path id="e"
+                  d="M8.95538742,12.6694189 C8.95538742,12.6694189 9.04883608,18.1288401 15.069217,17.3610597"
+                  id="Path-10"></path>
+              </g>
+            </g>
+          </g>
+        </svg>
+      </div>
+
+      <!-- Title block -->
+      <div class="col-12 title-block">
+        <h1 class="title fw-400">
+          Your digital identity looks
+          <span class="title trustworthy-status fw-500">
+            <img src="/img/trustworthy-status.svg" alt=""> Trustworthy
+          </span>
+          <span class="title suspicious-status fw-500 hide">
+            <img src="/img/suspicious-status.svg" alt=""> Suspicious
+          </span>
+          <span class="title unreliable-status fw-500 hide">
+            <img src="/img/unreliable-status.svg" alt=""> Unreliable
+          </span>
+        </h1>
+      </div>
+      <!-- End title block -->
+
+      <!-- Info block -->
+      <div class="col-12">
+        <div class="data-block">
+          <div class="data-block-in data-border">
+            <div class="pos-rel">
+              <div class="icon iconBr verified">
+              </div>
+              <img class="browserImg" src="img/browser.svg" alt="">
+            </div>
+            <div class="data-title brText">
+              BROWSER
+            </div>
+            <div class="data-text">
+              Your browser displayed <strong>as real</strong>. You are using Chrome
+            </div>
+          </div>
+          <div class="data-block-in data-border">
+            <div class="pos-rel">
+              <div class="icon iconL verified">
+              </div>
+              <img class="locationImg" src="img/location.svg" alt="">
+            </div>
+            <div class="data-title">
+              LOCATION
+            </div>
+            <div class="data-text">
+              Your location looks like <strong>an ordinary</strong> user's location
+            </div>
+          </div>
+          <div class="data-block-in data-border">
+            <div class="pos-rel">
+              <div class="icon verified">
+              </div>
+              <img class="ipImg" src="img/ip.svg" alt="">
+            </div>
+            <div class="data-title ipText">
+              IP ADDRESS
+            </div>
+            <div class="data-text">
+              Your IP-address <strong>is unique</strong> and is not blacklisted
+            </div>
+          </div>
+          <div class="data-block-in data-border">
+            <div class="pos-rel">
+              <div class="icon iconHard verified">
+              </div>
+              <img class="hardwareImg" src="img/hardware.svg" alt="">
+            </div>
+            <div class="data-title haText">
+              HARDWARE
+            </div>
+            <div class="data-text">
+              Hardware parameters <strong>match</strong> each other
+            </div>
+          </div>
+          <div class="data-block-in">
+            <div class="pos-rel">
+              <div class="icon verified">
+              </div>
+              <img class="softwareImg" src="img/software.svg" alt="">
+            </div>
+            <div class="data-title sfText">
+              SOFTWARE
+            </div>
+            <div class="data-text">
+              Software settings <strong>don't look</strong> suspicious
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End info block -->
+
+      <!-- Question block -->
+      <div class="col-12">
+        <div class="subtitle-block">
+          <div class="subtitle-block-in">
+            <div class="subtitle-block-title">
+              <div class="subtitle-img">
+                <img src="img/ask.svg" width="24px" alt="">
+              </div>
+              <div class="subtitle-one">
+                <p class="subtitle-text-one fw-700">
+                  How is this determined?
+                </p>
+              </div>
+            </div>
+            <div class="subtitle-two">
+              <p class="subtitle-text-two fw-400">
+                We take all browser settings from our databases of browser fingerprints, collected from real people
+                from
+                all over the world, so that you are not banned by the servers with whom you plan to work
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End question block -->
+    </div>
+  </div>
+
+  <!-- Data fields block -->
+  <div class="fields-block">
+
+    <div class="container-fluid">
+      <!-- Container block -->
+      <div class="container">
+        <div class="container container-fields">
+          <div class="col-12 info-tabs">
+            <h2 class="subtitle">
+              What websites sees about you
+            </h2>
+
+            <div id="browserText" class="tabs">
+              <div class="data-menu">
+                <a id="browserTab" style="width: 66px;" class="on-search" href="#browserText">Browser</a>
+                <a id="locTab" style="width: 121px;" href="#locText">Location</a>
+                <a id="ipTab" style="width: 88px;" href="#ipText">IP-address</a>
+                <a id="hardwareTab" style="width: 127px;" href="#hardwareText">Hardware</a>
+                <a id="softwareTab" style="width: 76px" href="#softwareText">Software</a>
+                <hr class="menu-dark-border">
+              </div>
+
+              <!-- Content block -->
+              <div class="content-block">
+                <div class="user-info" id="content-1">
+                  
+                  
+                  <div class="user-block user-block-hr">
+                    <div class="data-name">
+                      <p>Platform</p>
+                    </div>
+                    <div class="user-data">
+                      <p>Microsoft Windows</p>
+                    </div>
+                  </div>
+
+                  
+                  
+                  
+                  <div class="user-block user-block-hr">
+                    <div class="data-name">
+                      <p>Browser</p>
+                    </div>
+                    <div class="user-data">
+                      <p>Chrome</p>
+                    </div>
+                  </div>
+
+                  
+                  
+                  
+                  <div class="user-block user-block-hr">
+                    <div class="data-name">
+                      <p>Browser version</p>
+                    </div>
+                    <div class="user-data">
+                      <p>85.0.4183.102</p>
+                    </div>
+                  </div>
+
+                  
+                  
+                  
+                  <div class="user-block user-block-hr">
+                    <div class="data-name">
+                      <p>Headers</p>
+                    </div>
+                    <div class="user-data">
+                      <p>Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36</p>
+                    </div>
+                  </div>
+
+                  
+                  
+
+                  <div class="user-block user-block-hr">
+                    <div class="data-name">
+                      <p style="margin-top: 20px;">JavaScript</p>
+                    </div>
+                    <div class="user-data">
+                      <p id="js-userAgent"></p>
+                    </div>
+                  </div>
+                  <hr style="margin-top: -1px;opacity: 0.3;">
+                </div>
+
+                <a class="anchor" id="locText"></a>
+                <div style="min-height: auto;">
+                  <h3 class="name-data-block">
+                    Location
+                  </h3>
+                </div>
+                <hr>
+
+                <div class="user-info" id="content-2">
+                  
+
+                  <div class="user-block user-block-two user-block-hr">
+                    <div class="data-name">
+                      <p>Country</p>
+                    </div>
+                    <div class="user-data">
+                      <p>Germany (DE)</p>
+                    </div>
+                  </div>
+                  
+
+                  
+                  
+                    <div class="user-block user-block-two user-block-hr">
+                      <div class="data-name">
+                        <p>Continent</p>
+                      </div>
+                      <div class="user-data">
+                        <p>Europe</p>
+                      </div>
+                    </div>
+                  
+                  
+                  
+                    <div class="user-block user-block-two user-block-hr">
+                      <div class="data-name">
+                        <p>Region</p>
+                      </div>
+                      <div class="user-data">
+                        <p>St. Leonhard</p>
+                      </div>
+                    </div>
+                  
+                  
+                  
+                    <div class="user-block user-block-two user-block-hr">
+                      <div class="data-name">
+                        <p>City</p>
+                      </div>
+                      <div class="user-data">
+                        <p>Nuremberg</p>
+                      </div>
+                    </div>
+                  
+                  
+                  
+                    <div class="user-block user-block-two user-block-hr">
+                      <div class="data-name">
+                        <p>Latitude</p>
+                      </div>
+                      <div class="user-data">
+                        <p>51.2993</p>
+                      </div>
+                    </div>
+                  
+                  
+                  
+                    <div class="user-block user-block-two user-block-hr">
+                      <div class="data-name">
+                        <p>Longitude</p>
+                      </div>
+                      <div class="user-data">
+                        <p>9.491</p>
+                      </div>
+                    </div>
+                  
+                  
+                  
+                    <div class="user-block user-block-two user-block-hr">
+                      <div class="data-name">
+                        <p>Zip</p>
+                      </div>
+                      <div class="user-data">
+                        <p>90439</p>
+                      </div>
+                    </div>
+                  
+                  
+                  <hr style="margin-top: -1px;opacity: 0.3;">
+                  <div class="map-location">
+                    <div class="user-data"></div>
+                    <div id="map"></div>
+                  </div>
+                </div>
+
+                <a class="anchor" id="ipText"></a>
+                <div style="min-height: auto;">
+                  <h3 class="name-data-block letter">
+                    IP-address
+                  </h3>
+                </div>
+                <hr>
+                <div class="user-info" id="content-3">
+                  
+                  
+                  <div class="user-block user-block-two user-block-hr">
+                    <div class="data-name data-name-two">
+                      <p>IP</p>
+                    </div>
+                    <div class="user-data">
+                      <p>78.46.103.55</p>
+                    </div>
+                  </div>
+                  
+                  
+                  
+                  <div class="user-block user-block-two user-block-hr">
+                    <div class="data-name data-name-two">
+                      <p>IP range</p>
+                    </div>
+                    <div class="user-data">
+                      <p>78.46.64.0/18</p>
+                    </div>
+                  </div>
+                  
+                  
+                  
+                  <div class="user-block user-block-two user-block-hr">
+                    <div class="data-name data-name-two">
+                      <p>ISP</p>
+                    </div>
+                    <div class="user-data">
+                      <p>Hetzner Online GmbH</p>
+                    </div>
+                  </div>
+                  
+                  
+                  
+                  
+                  
+                  <div class="user-block user-block-two user-block-hr">
+                    <div class="data-name data-name-two">
+                      <p>AS Number</p>
+                    </div>
+                    <div class="user-data">
+                      <p>AS24940</p>
+                    </div>
+                  </div>
+                  
+                  
+                  
+                  <div class="user-block user-block-two user-block-hr">
+                    <div class="data-name data-name-two">
+                      <p>AS Organization</p>
+                    </div>
+                    <div class="user-data">
+                      <p>Hetzner Online GmbH</p>
+                    </div>
+                  </div>
+                  
+                  
+                  <div class="user-block user-block-two">
+                    <div class="data-name">
+                      <p>Security</p>
+                    </div>
+                    <div class="user-data">
+                      <p>
+                        
+                        All clear
+                        
+                      </p>
+                    </div>
+                  </div>
+                  <hr>
+                </div>
+
+                <a class="anchor" id="hardwareText"></a>
+                <div style="min-height: auto;">
+                  <h3 class="name-data-block">
+                    Hardware
+                  </h3>
+                </div>
+                <hr>
+                <div class="user-info" id="content-4">
+                  <div class="user-block user-block-there user-block-hr">
+                    <div class="data-name data-name-two">
+                      <p>WebGL</p>
+                    </div>
+                    <div class="user-data">
+                      <p id="webgl">-</p>
+                    </div>
+                  </div>
+                  <div class="user-block user-block-there user-block-hr">
+                    <div class="data-name data-name-two">
+                      <p>Canvas</p>
+                    </div>
+                    <div class="user-data">
+                      <p id="canvas">-</p>
+                    </div>
+                  </div>
+                  <div class="user-block user-block-there user-block-hr">
+                    <div class="data-name data-name-two">
+                      <p>Audio</p>
+                    </div>
+                    <div class="user-data">
+                      <p id="audio">-</p>
+                    </div>
+                  </div>
+                  <div class="user-block user-block-there">
+                    <div class="data-name data-name-two">
+                      <p>Client Rects</p>
+                    </div>
+                    <div class="user-data">
+                      <p id="clientRects">-</p>
+                    </div>
+                  </div>
+                  <hr>
+                </div>
+
+                <a class="anchor" id="softwareText"></a>
+                <div style="min-height: auto;">
+                  <h3 class="name-data-block">
+                    Software
+                  </h3>
+                </div>
+                <hr>
+                <div class="user-info" id="content-5">
+                  
+                  
+                  <div class="user-block user-block-two user-block-hr">
+                    <div class="data-name">
+                      <p>Time Zone</p>
+                    </div>
+                    <div class="user-data">
+                      <p>Europe/Berlin</p>
+                    </div>
+                  </div>
+                  
+                  
+                  
+                  <div class="user-block user-block-two user-block-hr">
+                    <div class="data-name">
+                      <p>Local Time</p>
+                    </div>
+                    <div class="user-data">
+                      <p>Thu Aug 26 2021 19:15:02 GMT+0200</p>
+                    </div>
+                  </div>
+                  
+                  
+
+                  <div class="user-block mt3 user-block-two user-block-hr">
+                    <div class="data-name">
+                      <p>System Time</p>
+                    </div>
+                    <div class="user-data">
+                      <p id="system-time"></p>
+                    </div>
+                  </div>
+                  <div class="user-block mt1 user-block-two user-block-hr">
+                    <div class="data-name">
+                      <p>Language</p>
+                    </div>
+                    <div class="user-data">
+                      <div id="language"></div>
+                    </div>
+                  </div>
+                  <div class="user-block mt1 user-block-two user-block-hr">
+                    <div class="data-name">
+                      <p>WebRTC</p>
+                    </div>
+                    <div class="user-data">
+                      <div class="enabled-status-wrapper" id="webrtc-status">
+                        <span class="cont webrtc-status">Disabled</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="user-block mt1 user-block-two user-block-hr">
+                    <div class="data-name">
+                      <p>Javascript</p>
+                    </div>
+                    <div class="user-data">
+                      <div class="enabled-status-wrapper" id="javascript-status">
+                        <noscript>
+                          <span class="cont js-status">Disabled</span>
+                        </noscript>
+                        <span class="cont js-status">Enabled</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="user-block mt1 user-block-two user-block-hr">
+                    <div class="data-name">
+                      <p>Flash</p>
+                    </div>
+                    <div class="user-data">
+                      <div class="enabled-status-wrapper" id="flash-status">
+                        <span class="cont flash-status">Disabled</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="user-block mt1 user-block-two user-block-hr">
+                    <div class="data-name">
+                      <p>ActiveX</p>
+                    </div>
+                    <div class="user-data">
+                      <div class="enabled-status-wrapper" id="activex-status">
+                        <span class="cont activex-status">Disabled</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="user-block mt1 user-block-two user-block-hr">
+                    <div class="data-name">
+                      <p>Java</p>
+                    </div>
+                    <div class="user-data">
+                      <div class="enabled-status-wrapper" id="java-status">
+                        <span class="cont java-status">Disabled</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="user-block mt1 user-block-two user-block-hr">
+                    <div class="data-name">
+                      <p>Cookies</p>
+                    </div>
+                    <div class="user-data">
+                      <div class="enabled-status-wrapper" id="cookies-status">
+                        <span class="cont cookies-status">Disabled</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="user-block mt1 user-block-two user-block-hr">
+                    <div class="data-name data-name-two">
+                      <p>Fonts</p>
+                    </div>
+                    <div class="user-data">
+                      <p id="fonts">Loading...</p>
+                    </div>
+                  </div>
+                  <div class="user-block mt1 user-block-two">
+                    <div class="data-name">
+                      <p>Fonts list</p>
+                    </div>
+                    <div class="user-data">
+                      <p class="fonts">Loading...</p>
+                    </div>
+                  </div>
+                  <hr>
+                  <div style="padding-bottom: 64px;"></div>
+
+                </div>
+
+              </div>
+              <!-- End content block -->
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <!-- End container block -->
+    </div>
+  </div>
+  <!-- End data fields block -->
+
+  <footer>
+  </footer>
+
+</body>
+
+
+<script>
+  window.globalTempVar = "eyJlbmMiOlsiZlU0YTBoWU5CYmVxcElHWE1QZks4eDgrU0w4L04rMEVxZ3dUZENqSjM4T2w1c3gycTZBaDY4QU9hZkFaUFd1TWpxM1FtUEhxa3ZyZFRnaTdwZFpXblllVllibEZydTdCTjhQZXJXMnp2aEplQXpFcmRoSUFkODh1bmxLbmk0Y1g2WStPeGRNY2ZyOFJQNkxwelhoVGREVnFEU0VvS1hHaldCWlhiR24wMjcyd0tiNEozUmlwaVl1bTgzWFY5c3orWUlqOGduL0VweWZxcFMvaVhBTWV1bXJ6YWRJTlI1ZkR6YndkTUF3aXVZOXIraTRrUDN2dEQvQUR6MVJxSlFiSmlmdHd0Q2ZoZkNjbk5iTUs2S1RMQnl6bmNxYjVidWtnQU56NjZVL0lzakNtUXlXdWtaTHhIV0N2cSt5d3Y4REFUN2x3NTY4UzVPZWxqa053akdmYmxRPT0iXX0=";
+</script>
+
+
+<script src='js/libs/crypto.js'></script>
+<script src='js/libs/jsEncrypt.js'></script>
+<script src="js/libs/leaflet.js"></script>
+
+<script src='js/index.min.js'></script>
+
+</html>
