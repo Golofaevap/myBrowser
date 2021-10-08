@@ -1,3 +1,6 @@
-2021/08/26-21:25:03.079 20dc Reusing MANIFEST D:\Николай\tech\code\puppeteer\myBrowser\sessions\4@gmail.com\userDataDir\Default\Local Storage\leveldb/MANIFEST-000001
-2021/08/26-21:25:03.080 20dc Recovering log #3
-2021/08/26-21:25:03.081 20dc Reusing old log D:\Николай\tech\code\puppeteer\myBrowser\sessions\4@gmail.com\userDataDir\Default\Local Storage\leveldb/000003.log 
+2021/08/27-09:53:07.955 10cf0 Reusing MANIFEST D:\Николай\tech\code\puppeteer\myBrowser\sessions\4@gmail.com\userDataDir\Default\Local Storage\leveldb/MANIFEST-000001
+2021/08/27-09:53:07.956 10cf0 Recovering log #3
+2021/08/27-09:53:07.957 10cf0 Reusing old log D:\Николай\tech\code\puppeteer\myBrowser\sessions\4@gmail.com\userDataDir\Default\Local Storage\leveldb/000003.log 
+2021/08/27-10:05:39.015 f7f4 Level-0 table #5: started
+2021/08/27-10:05:39.019 f7f4 Level-0 table #5: 16064 bytes OK
+2021/08/27-10:05:39.023 f7f4 Delete type=0 #3
